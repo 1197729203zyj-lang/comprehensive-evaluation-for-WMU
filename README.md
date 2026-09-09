@@ -1,8 +1,5 @@
-接收一批学生材料（.doc / .docx / .zip / .rar / 已解压文件夹），每个顶层项代表一个学生。
-从每个学生的“综合测评记载册”Word 里，只找“分表二”发展素质测评（C3）表格，读取其中“个人加分项目及分值”列的内容，写入 Excel 的 H 列。
-把分表二底部“合计”行的总分写入 Excel 的 I 列，上限封顶 100。
-明确排除首页“温州医科大学评分表”的 C3 数值，也不读取分表一 C1 的内容和“加分依据”标准表里的数值。
-处理合并单元格重复、空行/0/无、只写了分数没写项目的单元格（保留为 +2 并标红）、跨行奖品名等细节。
-最终往 Excel 里按学生 ID 去重逐行填写，并校验学生行数与批次文件夹一致。
+该 skill 用于处理一批学生的 Word 综测记载册，只读取“分表二 发展素质测评（C3）”中的个人加分项和小计；自动生成或保留 Excel 第 1、2 行标准表头，并从第 3 行起逐名学生写入 A 学号、B 姓名、H 加分内容、I 小计。它不读取首页 C3 和 C1 内容，纯分值加分标红，并按要求完成人数、学号与内容校对。
+Create or keep the standard two-row A-O header of a 综合测评 Excel workbook, then fill each student starting at row 3 with A=学号, B=姓名, H=分表二 C3 bonus content, and I=C3 subtotal extracted from each student's Word 综合测评记载册. Use when asked to process a batch of student Word/zip/rar evaluation files into an Excel score table.
 
-表格一、二两行的内容尚在修改
+可识别压缩包、文件夹内doc、docx形式的综测材料。
+Can recognize comprehensive assessment materials in doc or docx format inside compressed folders or directories
