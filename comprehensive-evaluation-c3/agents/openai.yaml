@@ -1,3 +1,0 @@
-interface:
-  display_name: "Comprehensive Evaluation C3"
-  short_description: "Extract each student's C3 evaluation bonuses from Word 综合测评记载册 files and fill them into an Excel score workbook."
