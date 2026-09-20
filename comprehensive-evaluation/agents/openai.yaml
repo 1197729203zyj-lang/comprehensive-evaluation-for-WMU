@@ -1,0 +1,3 @@
+interface:
+  display_name: "温医大综测"
+  short_description: "Fill C1 and C3 Word data into the standard Excel table."
